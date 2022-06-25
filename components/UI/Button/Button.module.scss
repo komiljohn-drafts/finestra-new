@@ -5,9 +5,9 @@
   background-color: #2962ff;
   outline: none;
   border: none;
-  font-family: 'Epilogue', sans-serif;
-  padding: 15.5px 24px;
-  @include font(16px, 16px, 600, #fff);
+  padding: 11px 40px;
+  @include font(15px, 18px, 600, #fff);
+  font-family: 'SF Pro 600', sans-serif;
   transition: 0.3s ease;
   &:hover,
   &:focus {

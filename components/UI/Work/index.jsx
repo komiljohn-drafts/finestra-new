@@ -2,14 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Container from '../../Layout/Container'
 import cls from './Work.module.scss'
-import {
-  BrowseSvg,
-  CompareSvg,
-  LeftBottomDecorator,
-  LeftDecoratorSvg,
-  RightDecoratorSvg,
-  StoreSvg,
-} from '../../../utils/svgs'
+import { BrowseSvg, CompareSvg, StoreSvg } from '../../../utils/svgs'
 import { useWindowSize } from '../../../utils/useWindowSize'
 import { motion } from 'framer-motion'
 
@@ -26,6 +19,11 @@ function Work() {
   return (
     <section className={cls.wrapper}>
       <Container>
+        <h2 className={cls.mainTitle}>What can you do with it?</h2>
+        <p className={cls.mainSubtitle}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique diam tempor auctor venenatis. Proin
+          auctor pellentesque nibh, consectetur.
+        </p>
         <div className={cls.work}>
           <motion.section
             initial='hidden'
@@ -39,15 +37,7 @@ function Work() {
             className={cls.left}
           >
             <div className={cls.image}>
-              <div className={cls.decorator}>
-                <LeftDecoratorSvg />
-              </div>
-              <Image
-                src='/images/work-1.png'
-                width={385}
-                height={385}
-                alt='work'
-              />
+              <Image src='/images/work-1.png' width={360} height={360} alt='work' />
               <div className={cls.small}>
                 <CompareSvg />
               </div>
@@ -57,9 +47,8 @@ function Work() {
                 <span>Compare</span> prices at local hospitals near you
               </h2>
               <p className={cls.subtitle}>
-                Find out how much a specific procedure may cost with your
-                insurance plan or status. A simple search with your insurance
-                and ZIP code shows you the most relevant prices for you.{' '}
+                Find out how much a specific procedure may cost with your insurance plan or status. A simple search with
+                your insurance and ZIP code shows you the most relevant prices for you.{' '}
               </p>
             </div>
           </motion.section>
@@ -75,15 +64,7 @@ function Work() {
             className={cls.right}
           >
             <div className={cls.image}>
-              <div className={cls.decorator}>
-                <RightDecoratorSvg />
-              </div>
-              <Image
-                src='/images/work-2.png'
-                width={385}
-                height={385}
-                alt='work'
-              />
+              <Image src='/images/work-2.png' width={385} height={385} alt='work' />
               <div className={cls.small}>
                 <BrowseSvg />
               </div>
@@ -93,10 +74,9 @@ function Work() {
                 <span>Browse</span> crowdsourced data at your fingertips
               </h2>
               <p className={cls.subtitle}>
-                Published price lists from hospitals create the foundation of
-                our results, but our data also contains verified costs from real
-                patient bills. Read reviews from fellow patients about their
-                experiences with your local hospital.
+                Published price lists from hospitals create the foundation of our results, but our data also contains
+                verified costs from real patient bills. Read reviews from fellow patients about their experiences with
+                your local hospital.
               </p>
             </div>
           </motion.section>
@@ -112,19 +92,7 @@ function Work() {
             className={cls.leftBottom}
           >
             <div className={cls.image}>
-              <div className={cls.decorator}>
-                {windowWidth === 'lg' ? (
-                  <LeftDecoratorSvg />
-                ) : (
-                  <LeftBottomDecorator />
-                )}
-              </div>
-              <Image
-                src='/images/work-3.png'
-                width={385}
-                height={385}
-                alt='work'
-              />
+              <Image src='/images/work-3.png' width={385} height={385} alt='work' />
               <div className={cls.small}>
                 <StoreSvg />
               </div>
@@ -134,10 +102,8 @@ function Work() {
                 Securely <span>store</span> healthcare information
               </h2>
               <p className={cls.subtitle}>
-                We utilize bank-level security, 256-bit encryption to securely
-                store your data in ways that even we cannot access your
-                information. No need to fear losing important information ever
-                again.
+                We utilize bank-level security, 256-bit encryption to securely store your data in ways that even we
+                cannot access your information. No need to fear losing important information ever again.
               </p>
             </div>
           </motion.section>

@@ -1,5 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './mixins';
+
+@font-face {
+  font-family: 'SF Pro 400';
+  src: url('/fonts/SF Pro 400.otf') format('otf');
+}
+@font-face {
+  font-family: 'SF Pro 500';
+  src: url('/fonts/SF Pro 500.otf') format('otf');
+}
+@font-face {
+  font-family: 'SF Pro 600';
+  src: url('/fonts/SF Pro 600.otf') format('otf');
+}
+
+$font-regular: 'SF Pro 400', sans-serif;
+$font-semibold: 'SF Pro 500', sans-serif;
+$font-bold: 'SF Pro 600', sans-serif;
 
 :root {
   --primary-color: #403c3b;
@@ -10,7 +30,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Epilogue', sans-serif;
+  font-family: 'SF Pro 400', sans-serif;
   overflow-x: hidden;
 }
 

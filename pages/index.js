@@ -5,6 +5,8 @@ import Navbar from '../components/UI/Navbar'
 import Offers from '../components/UI/Offers'
 import Work from '../components/UI/Work'
 import Footer from '../components/UI/Footer'
+import Trending from '../components/UI/Trending'
+import HowItWorks from '../components/UI/HowItWorks'
 
 export default function Home() {
   return (
@@ -18,8 +20,9 @@ export default function Home() {
       <main>
         <Navbar />
         <Banner />
+        <Trending />
+        <HowItWorks />
         <Work />
-        <Offers />
         <Follow />
         <Footer />
       </main>

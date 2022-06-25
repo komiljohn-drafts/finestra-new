@@ -1,13 +1,14 @@
 @import '../../../styles/mixins';
 
 .wrapper {
-  padding: 105px 0 73px;
+  padding: 230px 0 235px;
+  background: url('/images/bg.png') no-repeat top center / cover;
   @include md {
     padding: 65px 0 53px;
   }
   .banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transition: 0.3s ease;
     @include xl {
@@ -17,7 +18,9 @@
       flex-direction: column-reverse;
     }
     .content {
-      max-width: 445px;
+      max-width: 685px;
+      text-align: center;
+      color: #fff;
       @include lg {
         max-width: 365px;
       }
@@ -26,26 +29,35 @@
         text-align: center;
       }
       .title {
-        @include font(48px, 58px, 600);
+        @include font(48px, 58px, 500);
         letter-spacing: -1.95918px;
-        margin-bottom: 33px;
+        margin-bottom: 10px;
+        color: #fff;
+        position: relative;
+        z-index: 10;
         span {
           font-weight: 800;
           display: inline-block;
           position: relative;
+          z-index: -1;
           &::after {
             content: '';
             position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
+            bottom: 0px;
+            left: 95px;
+            width: 120%;
             height: 15px;
             background: #ff8600;
             mix-blend-mode: normal;
-            opacity: 0.32;
             z-index: -1;
           }
         }
+      }
+      .subtitle {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 500;
+        margin-bottom: 60px;
       }
       .action {
         display: flex;
@@ -57,11 +69,6 @@
         padding: 0 10px;
         @include font(17px, 30px, 500, rgba(0, 0, 0, 0.59));
       }
-    }
-  }
-  .image {
-    @include md {
-      width: 85%;
     }
   }
 }

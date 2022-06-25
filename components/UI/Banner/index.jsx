@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
 import Container from '../../Layout/Container'
 import cls from './Banner.module.scss'
 import Input from '../Input'
@@ -7,6 +6,10 @@ import Button from '../Button'
 import { motion } from 'framer-motion'
 
 function Banner() {
+  const [procedure, setProcedure] = useState('')
+  const [zipCode, setZipCode] = useState('')
+  const [insurance, setInsurance] = useState('')
+
   return (
     <motion.section
       initial='hidden'
@@ -23,24 +26,17 @@ function Banner() {
         <div className={cls.banner}>
           <div className={cls.content}>
             <h1 className={cls.title}>
-              Take control of <span>your</span> healthcare
+              Find how much <span>your</span> medical care should cost
             </h1>
+            <p className={cls.subtitle}>Don&apos;t get caught off guard by your next medical bill.</p>
             <div className={cls.action}>
-              <Input />
-              <Button>Submit</Button>
+              <Input value={procedure} onChange={setProcedure} placeholder='Prodecure' />
+              <Input value={zipCode} onChange={setZipCode} placeholder='ZIP Code' />
+              <Input value={insurance} onChange={setInsurance} placeholder='Insurance' />
+              <Button bgColor='#2962FF' color='#fff' classes='h-[48px]'>
+                Search
+              </Button>
             </div>
-            <div className={cls.text}>
-              Enter your e-mail above so you will be the first one to know when
-              we launch!
-            </div>
-          </div>
-          <div className={cls.image}>
-            <Image
-              src='/images/banner.png'
-              width={546}
-              height={557}
-              alt='hand with phone'
-            />
           </div>
         </div>
       </Container>

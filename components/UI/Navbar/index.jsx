@@ -5,6 +5,7 @@ import cls from './Navbar.module.scss'
 import { useWindowSize } from '../../../utils/useWindowSize'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Button from '../Button'
 
 const boxWrapperVariants = {
   open: {
@@ -65,85 +66,21 @@ function Navbar() {
           <div className={cls.logo}>
             <Link href='/'>
               <>
-                <Image
-                  src='/icons/logo.svg'
-                  width={32}
-                  height={32}
-                  alt='logo'
-                />
+                <Image src='/icons/logo.svg' width={32} height={32} alt='logo' />
                 <span>finestra</span>
               </>
             </Link>
           </div>
-          {showBurger ? (
-            <div className={cls.burger__wrapper}>
-              <div
-                className={cls.burger}
-                onClick={() => setShowBurgerMenu((p) => !p)}
-              >
-                <motion.div
-                  animate={showBurgerMenu ? 'open' : 'closed'}
-                  variants={btnOpenTopVariant}
-                  className={cls.burger__item}
-                ></motion.div>
-                <motion.div
-                  animate={showBurgerMenu ? 'open' : 'closed'}
-                  variants={btnClosedVariant}
-                  className={cls.burger__item}
-                ></motion.div>
-                <motion.div
-                  animate={showBurgerMenu ? 'open' : 'closed'}
-                  variants={btnOpenBottomVariant}
-                  className={cls.burger__item}
-                ></motion.div>
-              </div>
-            </div>
-          ) : (
-            <ul className={cls.nav__list}>
-              <li className={cls.nav__item}>
-                <a href='#'>Home</a>
-              </li>
-              <li className={cls.nav__item}>
-                <a href='#'>Blog</a>
-              </li>
-              <li className={cls.nav__item}>
-                <a href='#'>About Us</a>
-              </li>
-              <li className={cls.nav__item}>
-                <a href='#'>Contact</a>
-              </li>
-            </ul>
-          )}
+          <div>
+            <span className='text-white'>
+              <Link href='/signin'>
+                <a className='text-white mr-6 text-base leading-5'>Sign in</a>
+              </Link>
+            </span>
+            <Button>Upload Bills</Button>
+          </div>
         </nav>
       </Container>
-      <motion.div
-        style={{ opacity: 0 }}
-        animate={showBurgerMenu ? 'open' : 'closed'}
-        variants={boxWrapperVariants}
-        className={cls.box__wrapper}
-        onClick={() => setShowBurgerMenu(false)}
-      ></motion.div>
-      <motion.div
-        style={{ opacity: 0 }}
-        animate={showBurgerMenu ? 'open' : 'closed'}
-        variants={burgerMenuVariants}
-        className={cls.burger__menu}
-      >
-        <ul>
-          <li onClick={() => setShowBurgerMenu(false)}>
-            <a href='#'>Home</a>
-          </li>
-          <li onClick={() => setShowBurgerMenu(false)}>
-            <a href='#'>Blog</a>
-          </li>
-          <li onClick={() => setShowBurgerMenu(false)}>
-            <a href='#'>About Us</a>
-          </li>
-          <li onClick={() => setShowBurgerMenu(false)}>
-            <a href='#'>Contact</a>
-          </li>
-        </ul>
-      </motion.div>
     </div>
   )
 }
