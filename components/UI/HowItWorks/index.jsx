@@ -1,5 +1,6 @@
 import { SavingsSvg, SearchBoldSvg, SmileSvg } from '../../../utils/svgs'
 import cls from './HowItWorks.module.scss'
+import { motion } from 'framer-motion'
 
 const HowItWorks = () => {
   const features = [
@@ -11,7 +12,17 @@ const HowItWorks = () => {
   return (
     <>
       <div className={cls.borderTop}></div>
-      <section className={cls.wrapper}>
+      <motion.section
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        variants={{
+          visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+          hidden: { opacity: 0, y: '50px' },
+        }}
+        className={cls.wrapper}
+      >
         <h2 className={cls.title}>How does it work?</h2>
         <div className={cls.subtitle}>
           We have collected millions of data points from hospitals, insurance companies, and users like you to help
@@ -26,7 +37,7 @@ const HowItWorks = () => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
       <div className={cls.borderBottom}></div>
     </>
   )

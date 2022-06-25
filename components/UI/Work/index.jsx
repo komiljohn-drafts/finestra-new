@@ -19,11 +19,22 @@ function Work() {
   return (
     <section className={cls.wrapper}>
       <Container>
-        <h2 className={cls.mainTitle}>What can you do with it?</h2>
-        <p className={cls.mainSubtitle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique diam tempor auctor venenatis. Proin
-          auctor pellentesque nibh, consectetur.
-        </p>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          variants={{
+            visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+            hidden: { opacity: 0, y: '50px' },
+          }}
+        >
+          <h2 className={cls.mainTitle}>What can you do with it?</h2>
+          <p className={cls.mainSubtitle}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique diam tempor auctor venenatis. Proin
+            auctor pellentesque nibh, consectetur.
+          </p>
+        </motion.div>
         <div className={cls.work}>
           <motion.section
             initial='hidden'
@@ -32,7 +43,7 @@ function Work() {
             transition={{ duration: 0.6, delay: 0.2 }}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: '-200px' },
+              hidden: { opacity: 0, x: '-100px' },
             }}
             className={cls.left}
           >
@@ -59,7 +70,7 @@ function Work() {
             transition={{ duration: 0.6, delay: 0.2 }}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: '200px' },
+              hidden: { opacity: 0, x: '100px' },
             }}
             className={cls.right}
           >
@@ -87,7 +98,7 @@ function Work() {
             transition={{ duration: 0.6, delay: 0.2 }}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: '-200px' },
+              hidden: { opacity: 0, x: '-100px' },
             }}
             className={cls.leftBottom}
           >

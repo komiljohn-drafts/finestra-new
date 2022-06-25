@@ -1,6 +1,7 @@
 import { SearchSvg } from '../../../utils/svgs'
 import Container from '../../Layout/Container'
 import cls from './Trending.module.scss'
+import { motion } from 'framer-motion'
 
 const Trending = () => {
   const searches = [
@@ -13,7 +14,17 @@ const Trending = () => {
   ]
 
   return (
-    <div className={cls.trending}>
+    <motion.div
+      className={cls.trending}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      variants={{
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+        hidden: { opacity: 0, y: '50px' },
+      }}
+    >
       <h5 className={cls.title}>Trending searches:</h5>
       <div className={cls.searches}>
         {searches.map((search) => (
@@ -23,7 +34,7 @@ const Trending = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

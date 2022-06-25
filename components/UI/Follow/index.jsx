@@ -15,7 +15,7 @@ function Follow() {
         transition={{ duration: 0.5 }}
         variants={{
           visible: { y: 0, opacity: 1 },
-          hidden: { y: '300px', opacity: 0 },
+          hidden: { y: '50px', opacity: 0 },
         }}
         className={cls.wrapper}
       >

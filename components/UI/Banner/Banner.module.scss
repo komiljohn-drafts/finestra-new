@@ -1,15 +1,16 @@
 @import '../../../styles/mixins';
 
 .wrapper {
+  height: 90vh;
   padding: 230px 0 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url('/images/bg.png') no-repeat top center / cover;
   @include md {
     padding: 65px 0 53px;
   }
   .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.3s ease;
     @include xl {
       gap: 30px;
@@ -18,7 +19,7 @@
       flex-direction: column-reverse;
     }
     .content {
-      max-width: 685px;
+      max-width: 650px;
       text-align: center;
       color: #fff;
       @include lg {

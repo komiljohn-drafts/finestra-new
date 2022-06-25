@@ -46,18 +46,18 @@ const btnClosedVariant = {
 }
 
 function Navbar() {
-  const size = useWindowSize()
+  const { width } = useWindowSize()
   const [showBurger, setShowBurger] = useState(false)
   const [showBurgerMenu, setShowBurgerMenu] = useState(false)
 
   useEffect(() => {
-    if (size.width <= 720) {
+    if (width <= 720) {
       setShowBurger(true)
     } else {
       setShowBurger(false)
       setShowBurgerMenu(false)
     }
-  }, [size])
+  }, [width])
 
   return (
     <div className={cls.wrapper}>
@@ -66,7 +66,7 @@ function Navbar() {
           <div className={cls.logo}>
             <Link href='/'>
               <>
-                <Image src='/icons/logo.svg' width={32} height={32} alt='logo' />
+                <Image className='absolute top-5' src='/icons/logo.svg' width={32} height={32} alt='logo' />
                 <span>finestra</span>
               </>
             </Link>
@@ -74,7 +74,11 @@ function Navbar() {
           <div>
             <span className='text-white'>
               <Link href='/signin'>
-                <a className='text-white mr-6 text-base leading-5'>Sign in</a>
+                {width < 577 ? (
+                  <Image src='/icons/login.svg' width={24} height={32} alt='sign in' />
+                ) : (
+                  <a className='text-white mr-6 text-base leading-5'>Sign in</a>
+                )}
               </Link>
             </span>
             <Button>Upload Bills</Button>
