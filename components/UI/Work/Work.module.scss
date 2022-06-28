@@ -57,6 +57,12 @@
     .image {
       position: relative;
       padding: 27px;
+      width: 385px;
+      height: 385px;
+      &:first-child {
+        width: 360px;
+        height: 360px;
+      }
       .decorator {
         position: absolute;
       }

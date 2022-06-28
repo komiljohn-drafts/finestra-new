@@ -5,6 +5,9 @@ import cls from './Work.module.scss'
 import { BrowseSvg, CompareSvg, StoreSvg } from '../../../utils/svgs'
 import { useWindowSize } from '../../../utils/useWindowSize'
 import { motion } from 'framer-motion'
+import WorkItem1Image from '/public/images/work-1.png'
+import WorkItem2Image from '/public/images/work-2.png'
+import WorkItem3Image from '/public/images/work-3.png'
 
 function Work() {
   const size = useWindowSize()
@@ -48,7 +51,7 @@ function Work() {
             className={cls.left}
           >
             <div className={cls.image}>
-              <Image src='/images/work-1.png' width={360} height={360} alt='work' />
+              <Image placeholder='blur' layout='responsive' src={WorkItem1Image} alt='banner' />
               <div className={cls.small}>
                 <CompareSvg />
               </div>
@@ -59,7 +62,7 @@ function Work() {
               </h2>
               <p className={cls.subtitle}>
                 Find out how much a specific procedure may cost with your insurance plan or status. A simple search with
-                your insurance and ZIP code shows you the most relevant prices for you.{' '}
+                your insurance and ZIP code shows you the most relevant prices for you.
               </p>
             </div>
           </section>
@@ -75,7 +78,7 @@ function Work() {
             className={cls.right}
           >
             <div className={cls.image}>
-              <Image src='/images/work-2.png' width={385} height={385} alt='work' />
+              <Image placeholder='blur' layout='responsive' src={WorkItem2Image} alt='banner' />
               <div className={cls.small}>
                 <BrowseSvg />
               </div>
@@ -103,7 +106,7 @@ function Work() {
             className={cls.leftBottom}
           >
             <div className={cls.image}>
-              <Image src='/images/work-3.png' width={385} height={385} alt='work' />
+              <Image placeholder='blur' layout='responsive' src={WorkItem3Image} alt='banner' />
               <div className={cls.small}>
                 <StoreSvg />
               </div>
