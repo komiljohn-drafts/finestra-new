@@ -10,6 +10,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .signin {
+      span {
+        @include sm {
+          top: 10px;
+          right: 16px;
+        }
+      }
+    }
     .logo {
       display: flex;
       cursor: pointer;
@@ -17,6 +25,9 @@
         @include font(17px, 30px, 800, #fff);
         margin-left: 16px;
         display: inline-block;
+        @include sm {
+          display: none;
+        }
       }
     }
     &__list {
@@ -30,6 +41,9 @@
         transition: 0.3s ease;
         &:hover {
           color: #fff;
+        }
+        @include sm {
+          margin-top: 20px;
         }
       }
     }

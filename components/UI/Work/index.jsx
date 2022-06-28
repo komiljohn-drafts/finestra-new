@@ -36,7 +36,7 @@ function Work() {
           </p>
         </motion.div>
         <div className={cls.work}>
-          <motion.section
+          <section
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
@@ -62,8 +62,8 @@ function Work() {
                 your insurance and ZIP code shows you the most relevant prices for you.{' '}
               </p>
             </div>
-          </motion.section>
-          <motion.section
+          </section>
+          <section
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
@@ -90,8 +90,8 @@ function Work() {
                 your local hospital.
               </p>
             </div>
-          </motion.section>
-          <motion.section
+          </section>
+          <section
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
@@ -117,7 +117,7 @@ function Work() {
                 cannot access your information. No need to fear losing important information ever again.
               </p>
             </div>
-          </motion.section>
+          </section>
         </div>
       </Container>
     </section>

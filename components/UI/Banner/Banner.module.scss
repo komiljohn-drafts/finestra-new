@@ -7,28 +7,12 @@
   align-items: center;
   justify-content: center;
   background: url('/images/bg.png') no-repeat top center / cover;
-  @include md {
-    padding: 65px 0 53px;
-  }
   .banner {
     transition: 0.3s ease;
-    @include xl {
-      gap: 30px;
-    }
-    @include md {
-      flex-direction: column-reverse;
-    }
     .content {
       max-width: 650px;
       text-align: center;
       color: #fff;
-      @include lg {
-        max-width: 365px;
-      }
-      @include md {
-        max-width: 100%;
-        text-align: center;
-      }
       .title {
         @include font(48px, 58px, 500);
         letter-spacing: -1.95918px;
@@ -36,6 +20,9 @@
         color: #fff;
         position: relative;
         z-index: 10;
+        @include md {
+          margin-bottom: 20px;
+        }
         span {
           font-weight: 800;
           display: inline-block;
@@ -51,6 +38,14 @@
             background: #ff8600;
             mix-blend-mode: normal;
             z-index: -1;
+            @include md {
+              left: -352px;
+              bottom: -57px;
+            }
+            @include sm {
+              left: 95px;
+              bottom: 0px;
+            }
           }
         }
       }
@@ -59,12 +54,26 @@
         line-height: 28px;
         font-weight: 500;
         margin-bottom: 60px;
+        @include md {
+          margin-bottom: 50px;
+        }
       }
       .action {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         margin-bottom: 33px;
+        @include md {
+          flex-direction: column;
+          gap: 20px;
+          input {
+            width: 100%;
+            margin-right: 0;
+          }
+          button {
+            width: 100%;
+          }
+        }
       }
       .text {
         padding: 0 10px;

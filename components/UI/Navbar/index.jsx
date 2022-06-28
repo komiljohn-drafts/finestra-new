@@ -59,6 +59,8 @@ function Navbar() {
     }
   }, [width])
 
+  console.log('width - ', width)
+
   return (
     <div className={cls.wrapper}>
       <Container>
@@ -71,17 +73,18 @@ function Navbar() {
               </>
             </Link>
           </div>
-          <div>
+          <div className={cls.signin}>
             <span className='text-white'>
               <Link href='/signin'>
                 {width < 577 ? (
-                  <Image src='/icons/login.svg' width={24} height={32} alt='sign in' />
+                  // <Image src='/icons/login.svg' width={24} height={32} alt='sign in' className='mt-5' />
+                  <a className='text-white mr-6 text-base leading-5'>Sign in</a>
                 ) : (
                   <a className='text-white mr-6 text-base leading-5'>Sign in</a>
                 )}
               </Link>
             </span>
-            <Button>Upload Bills</Button>
+            <Button style={{ padding: `${width < 577 ? '11px 20px' : ''}` }}>Upload Bills</Button>
           </div>
         </nav>
       </Container>

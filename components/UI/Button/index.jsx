@@ -1,11 +1,11 @@
 import React from 'react'
 import cls from './Button.module.scss'
 
-function Button({ children, color = '#333', bgColor = '#fff', classes }) {
+function Button({ children, color = '#333', bgColor = '#fff', classes, style }) {
   return (
     <button
-      className={`${classes} ${cls.button}`}
-      style={{ backgroundColor: bgColor || 'initial', color: color || 'initial' }}
+      className={`${cls.button} ${classes}`}
+      style={{ backgroundColor: bgColor || 'initial', color: color || 'initial', ...style }}
       type='submit'
     >
       {children}
