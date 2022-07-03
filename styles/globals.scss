@@ -2,24 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './mixins';
+@import "./mixins";
 
 @font-face {
-  font-family: 'SF Pro 400';
-  src: url('/fonts/SF Pro 400.otf') format('otf');
+  font-family: "SF Pro 400";
+  src: url("/fonts/SF Pro 400.otf") format("otf");
 }
 @font-face {
-  font-family: 'SF Pro 500';
-  src: url('/fonts/SF Pro 500.otf') format('otf');
+  font-family: "SF Pro 500";
+  src: url("/fonts/SF Pro 500.otf") format("otf");
 }
 @font-face {
-  font-family: 'SF Pro 600';
-  src: url('/fonts/SF Pro 600.otf') format('otf');
+  font-family: "SF Pro 600";
+  src: url("/fonts/SF Pro 600.otf") format("otf");
 }
 
-$font-regular: 'SF Pro 400', sans-serif;
-$font-semibold: 'SF Pro 500', sans-serif;
-$font-bold: 'SF Pro 600', sans-serif;
+$font-regular: "SF Pro 400", sans-serif;
+$font-semibold: "SF Pro 500", sans-serif;
+$font-bold: "SF Pro 600", sans-serif;
 
 :root {
   --primary-color: #403c3b;
@@ -30,7 +30,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'SF Pro 400', sans-serif;
+  font-family: "SF Pro 400", sans-serif;
   overflow-x: hidden;
 }
 
@@ -72,6 +72,12 @@ button {
   border: none;
   background: inherit;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
 }
