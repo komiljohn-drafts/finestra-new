@@ -1,0 +1,81 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "SF Pro 400";
+  src: url("/fonts/SF Pro 400.otf") format("otf");
+}
+@font-face {
+  font-family: "SF Pro 500";
+  src: url("/fonts/SF Pro 500.otf") format("otf");
+}
+@font-face {
+  font-family: "SF Pro 600";
+  src: url("/fonts/SF Pro 600.otf") format("otf");
+}
+
+:root {
+  --font-regular: "SF Pro 400", sans-serif;
+  --font-semibold: "SF Pro 500", sans-serif;
+  --font-bold: "SF Pro 600", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SF Pro 400", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: inherit;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+.family-600 {
+  font-family: var(--font-bold);
+}

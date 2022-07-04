@@ -1,16 +1,11 @@
-@import '../../../styles/mixins';
+@import "../../../styles/mixins";
 
 .button {
   border-radius: 25px;
-  background-color: #2962ff;
   outline: none;
   border: none;
   padding: 11px 40px;
-  @include font(15px, 18px, 600, #fff);
-  font-family: 'SF Pro 600', sans-serif;
+  @include font(15px, 18px, 600);
+  font-family: "SF Pro 600", sans-serif;
   transition: 0.3s ease;
-  &:hover,
-  &:focus {
-    background-color: #0044ff;
-  }
 }

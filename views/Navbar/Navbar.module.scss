@@ -1,0 +1,119 @@
+@import "../../styles/mixins";
+
+.wrapper {
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  .nav {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .signin {
+      span {
+        @include sm {
+          top: 10px;
+          right: 16px;
+        }
+      }
+    }
+    .logo {
+      display: flex;
+      cursor: pointer;
+      span {
+        @include font(17px, 30px, 800, #fff);
+        margin-left: 16px;
+        display: inline-block;
+        @include sm {
+          display: none;
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      gap: 25px;
+    }
+    &__item {
+      a {
+        color: #fff;
+        @include font(16px, 16px, 500, rgba(255, 255, 255, 0.84));
+        transition: 0.3s ease;
+        &:hover {
+          color: #fff;
+        }
+        @include sm {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.burger__wrapper {
+  position: relative;
+  .burger {
+    z-index: 3;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    &__item {
+      width: 40px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.burger__menu {
+  padding: 100px 50px 200px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  width: 65%;
+  text-align: right;
+  z-index: 2;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-between;
+    li {
+      a {
+        position: relative;
+        &::after {
+          content: "";
+          width: 0%;
+          height: 10px;
+          position: absolute;
+          top: 17px;
+          right: 0;
+          background-color: #ff8600;
+          z-index: -1;
+          transition: 0.3s ease;
+          transform-origin: left;
+        }
+        &:hover::after {
+          transform-origin: right;
+          width: 100%;
+        }
+        @include font(24px, 28px, 500, #fff);
+      }
+    }
+  }
+}
+
+.box__wrapper {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}

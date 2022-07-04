@@ -276,8 +276,8 @@ export const QuestionSvg = ({ className }) => (
   </svg>
 )
 
-export const ArrowDownFilledSvg = () => (
-  <svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const ArrowDownFilledSvg = ({ className }) => (
+  <svg width="21" height="10" viewBox="0 0 21 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <path d="M0.5 0H20.5L10.5 10L0.5 0Z" fill="#2962FF" />
   </svg>
 )

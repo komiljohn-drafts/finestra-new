@@ -1,8 +1,8 @@
-import Comparison from "../components/UI/Comparison"
-import Navbar from "../components/UI/Navbar"
-import SearchResult from "../components/UI/SearchResult"
-import Footer from "../components/UI/Footer"
-import Hospitals from "../components/UI/Hospitals"
+import Comparison from "../views/Comparison"
+import Navbar from "../views/Navbar"
+import SearchResult from "../views/SearchResult"
+import Footer from "../views/Footer"
+import Hospitals from "../views/Hospitals"
 
 const SearchPage = () => {
   return (

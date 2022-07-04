@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+
+.borderTop {
+  width: 88.8%;
+  height: 1px;
+  background: rgba(151, 151, 151, 0.2);
+  margin-inline: auto;
+  margin: 146px auto 83px;
+}
+.wrapper {
+  padding-bottom: 155px;
+  position: relative;
+  .follow {
+    max-width: 705px;
+    padding: 0 23px;
+    margin-inline: auto;
+    text-align: center;
+    .title {
+      @include font(44px, 57px, 700);
+      margin-bottom: 12px;
+      letter-spacing: -1.95918px;
+    }
+    input {
+      max-width: 353px;
+      margin-bottom: 36px;
+    }
+    .subtitle {
+      @include font(18px, 30px, 500, rgba(0, 0, 0, 0.47));
+      margin-bottom: 38px;
+      margin-inline: auto;
+    }
+  }
+}

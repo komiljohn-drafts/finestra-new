@@ -1,11 +1,11 @@
 import Head from "next/head"
-import Banner from "../components/UI/Banner"
-import Follow from "../components/UI/Follow"
-import Navbar from "../components/UI/Navbar"
-import Work from "../components/UI/Work"
-import Footer from "../components/UI/Footer"
-import Trending from "../components/UI/Trending"
-import HowItWorks from "../components/UI/HowItWorks"
+import Banner from "../views/Banner"
+import Follow from "../views/Follow"
+import Navbar from "../views/Navbar"
+import Work from "../views/Work"
+import Footer from "../views/Footer"
+import Trending from "../views/Trending"
+import HowItWorks from "../views/HowItWorks"
 
 export default function Home() {
   return (
