@@ -27,9 +27,7 @@ function Navbar() {
                 <a className="text-white mr-6 text-base leading-5">Sign in</a>
               </Link>
             </span>
-            <Button color="#000" bgColor="#fff" style={{ padding: `${width < 577 ? "11px 20px" : ""}` }}>
-              Upload Bills
-            </Button>
+            <Button classes={`bg-[#fff] text-[#000]`}>Upload Bills</Button>
           </div>
         </nav>
       </Container>

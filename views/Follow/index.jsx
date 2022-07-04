@@ -26,9 +26,7 @@ function Follow() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare libero a ex pretium rutrum.
               Mauris orci tellus, lacinia id lacus vitae.
             </p>
-            <Button bgColor="#FF8600" color="#fff" classes="h-[48px]">
-              Register your account
-            </Button>
+            <Button classes="h-[48px] bg-[#FF8600] text-[#fff]">Register your account</Button>
           </div>
         </Container>
       </motion.section>

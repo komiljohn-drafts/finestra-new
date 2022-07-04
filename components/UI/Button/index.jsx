@@ -3,7 +3,7 @@ import cls from "./Button.module.scss"
 
 function Button({ children, color, bgColor, classes, ...rest }) {
   return (
-    <button className={`${cls.button} ${classes} bg-[${bgColor}] text-[${color}]`} type="submit" {...rest}>
+    <button className={`${cls.button} ${classes}`} type="submit" {...rest}>
       {children}
     </button>
   )

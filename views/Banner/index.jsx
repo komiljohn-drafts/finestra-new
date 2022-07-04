@@ -45,7 +45,7 @@ function Banner() {
               <Input value={procedure} onChange={setProcedure} placeholder="Prodecure" />
               <Input value={zipCode} onChange={setZipCode} placeholder="ZIP Code" />
               <Input value={insurance} onChange={setInsurance} placeholder="Insurance" />
-              <Button bgColor="#2962FF" color="#fff" classes="h-[48px]" onClick={() => router.push("/search")}>
+              <Button classes="h-[48px] bg-[#2962FF] text-[#fff]" onClick={() => router.push("/search")}>
                 Search
               </Button>
             </motion.div>
