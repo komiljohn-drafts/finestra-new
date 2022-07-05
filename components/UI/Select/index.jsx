@@ -1,12 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { ArrowDownSvg } from "../../../utils/svgs"
+import useClickOutside from "../../../hooks/useClickOutside"
 
 const Select = ({ options, value, setValue, width, className, fontStyle = "", selectedStyle }) => {
   const [show, setShow] = useState(false)
+  const selectRef = useRef()
+  useClickOutside(selectRef, () => setShow(false))
 
   return (
-    <div className={`relative ${className}`} style={{ width: `${width}px` }}>
+    <div className={`relative ${className}`} style={{ width: `${width}px` }} ref={selectRef}>
       <div
         className={`w-full rounded-full flex justify-between items-center cursor-pointer hover:border-[#2962ff] select-none duration-300 focus-within:border-[#2962FF] ${
           selectedStyle || "px-1"

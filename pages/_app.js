@@ -1,7 +1,6 @@
 import "../styles/globals.css"
-import "nprogress/nprogress.css"
-import "../styles/globals.css"
 import Router from "next/router"
+import "nprogress/nprogress.css"
 import NProgress from "nprogress"
 import React from "react"
 
